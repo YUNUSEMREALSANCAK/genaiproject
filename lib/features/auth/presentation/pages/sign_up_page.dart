@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:genaiproject/core/constants/app_colors.dart';
 import 'package:genaiproject/core/constants/app_texts.dart';
+import 'package:genaiproject/features/auth/presentation/pages/sign_up_form_page.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
@@ -63,7 +64,14 @@ class SignUpPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUpFormPage(),
+                      ),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(vertical: 16),
